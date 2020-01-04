@@ -16,29 +16,30 @@ const Piaic = ({ data }) => {
       
     <div className = {indexS.title}>
     
-    <img className={indexS.presidentimg} src={president["file"]["url"]}/>
+    <img className={indexS.presidentimg} src={president["fluid"]["src"]}/>
     <div className={indexS.titleout}>
   <h1>{title}</h1>
   <h2>{title2}</h2>
   
   <p>{intro["intro"]}</p>
-  </div>
-    </div>
-    
-    <div className= {indexS.button_padding}>
+  <div className= {indexS.button_padding}>
     <div>
     <a href="https://portal.piaic.org/signup" target="_blank"><p className= {indexS.button}> Apply </p></a>
     </div> 
     <div className= {indexS.line}> </div>
     <ul >
-        <li className= {indexS.font_li}>
-  {applications}k+ 
-        </li>
-        <li className= {indexS.font_li2}>
-        Applications Recieved
-        </li>
+    <li className= {indexS.font_li}>{applications}k+ 
+    </li>
+    <li className= {indexS.font_li2}>
+    Applications Recieved
+    </li>
     </ul>
     </div>
+  </div>
+  
+    </div>
+    
+    
     <div className= {indexS.heading}>
   <p>{heading2}</p>
     </div>
@@ -202,8 +203,7 @@ const Piaic = ({ data }) => {
   <h1>{heading5}</h1>
   <div className={indexS.spotlight2}>
   <div className={indexS.spotlight}>
-  <div className={indexS.image}>
-  </div>
+  <div className={indexS.image}><img src={allImages[0]["fluid"]["src"]}/></div>
   <div className={indexS.text}>
   <h2>{imageTags[0]}</h2>
 <p>{imageText1['imageText1']}</p>
@@ -211,8 +211,7 @@ const Piaic = ({ data }) => {
   </div>
 
   <div className={indexS.spotlight}>
-  <div className={indexS.image2}>
-  </div>
+  <div className={indexS.image2}><img src={allImages[1]["fluid"]["src"]}/></div>
   <div className={indexS.text}>
 <h2>{imageTags[1]}</h2>
 <p>{imageText2.imageText2}</p>
@@ -220,8 +219,7 @@ const Piaic = ({ data }) => {
   </div>
   
   <div className={indexS.spotlight}>
-  <div className={indexS.image3}>
-  </div>
+  <div className={indexS.image3}><img src={allImages[2]["fluid"]["src"]}/></div>
   <div className={indexS.text2}>
   <h2>{imageTags[2]}</h2>
   <p>{imageText3.imageText3}</p>
@@ -342,8 +340,8 @@ export const pageQuery = graphql`
 query MyQuery {
   contentfulHome {
     president {
-      file {
-        url
+      fluid {
+        src
       }
     }
     title
@@ -391,8 +389,8 @@ query MyQuery {
     heading6
     allImages {
       
-      file {
-        url
+      fluid {
+        src
       }
     }
   }

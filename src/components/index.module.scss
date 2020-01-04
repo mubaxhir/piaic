@@ -14,12 +14,12 @@
         background-size: 386px auto;
         scroll-behavior: smooth;
         background-color: rgb(228, 228, 228);
-        box-sizing: content-box;
+        
         }
 
     .titleout{
         float: right;
-        width: 70%;
+        max-width: 70%;
         h1{
         font-weight: bold;
         font-size: 65px;
@@ -38,10 +38,11 @@
     }
 }
 .button_padding{
-    padding-left: 61em;
+    
     padding-top: 7rem;
     padding-right: 3rem;
     display: flex;
+    float: right;
 }
 .button {
     background: linear-gradient(to right, rgb(57, 187, 148) , rgb(131, 218, 174)); 
@@ -612,7 +613,6 @@ font-weight: 500;
 line-height: 1.2;
 color: #04c492!important;
 text-decoration: underline;
-font-family: myfontRegular;
 font-size: 13px;
 text-align: left;
 margin: 0 0 4px;
@@ -740,18 +740,20 @@ height: 100%;
 }
 
 .image{
-flex-shrink: 0;   
-width: 700px;
-height: 400px;
-background-repeat: no-repeat;
-background-size: cover;
-background-image: url("./1.jpg");
-margin-left: 1.5rem;
-margin-right: 2rem;
-margin-top: 4.5rem;
-
-}
-
+    flex-shrink: 0;   
+    width: 700px;
+    height: 400px;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-image: url("./3.jpg");
+    margin-left: 1.5rem;
+    // margin-right: 2rem;
+    margin-top: 4.5rem;
+    img{
+        max-width: 650px;
+    }
+    }
+   
 .text {
     height: 350px;
     width: 470px;
@@ -784,26 +786,32 @@ margin-top: 4.5rem;
 
 .image2{
     flex-shrink: 0;   
-    width: 700px;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-image: url("./2.jpg");
-    margin-left: 1.5rem;
-    margin-right: 2rem;
-    margin-top: 4.5rem;
-    }
+        width: 700px;
+        height: 400px;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-image: url("./3.jpg");
+        margin-left: 1.5rem;
+        // margin-right: 2rem;
+        margin-top: 4.5rem;
+        img{
+            max-width: 650px;
+        }
+        }
 
 .image3{
         flex-shrink: 0;   
         width: 700px;
         height: 400px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url("./3.jpg");
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-image: url("./3.jpg");
         margin-left: 1.5rem;
-        margin-right: 2rem;
+        // margin-right: 2rem;
         margin-top: 4.5rem;
-        
+        img{
+            max-width: 650px;
+        }
         }
 
 .text2{
