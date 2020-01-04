@@ -19,7 +19,7 @@ export default () => <header >
   <p>About</p>
   <ul className={HeaderS.nav__sub_menu}>
   <li>
-  <Link to="/thePresident"><p>The President</p></Link>
+  <Link to="/about"><p>The President</p></Link>
   </li>
   <li>
   <Link to="/managementComittee"><p>Management Comittee</p></Link>

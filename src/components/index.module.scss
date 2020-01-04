@@ -1,43 +1,48 @@
 .body{
-    background-image: url('./president.png');
-    background-repeat: no-repeat;
-    background-position: 35px 102px;
-    background-size: 386px auto;
-    scroll-behavior: smooth;
     background-color: rgb(228, 228, 228);
     padding-bottom: 3rem;
 }
 
 .title{
-    text-align: left;
-    padding-left: 33rem;
+    padding-left: 2rem;
     padding-right: 5rem;
     padding-top: 4.3rem;
     
-    h1{
-    font-weight: bold;
-    font-size: 65px;
-    padding-top: 5rem;
-    margin: 0;
-    }
-    h2{
-    font-size: 32px;
-    padding-top: 0.5rem;
-    margin: 0;
-    }
-    p{
-    font-size: 16px;
-    padding-top: 1.8rem;
+    presidentimg{
+        float: left;
+        position: 35px 102px;
+        background-size: 386px auto;
+        scroll-behavior: smooth;
+        background-color: rgb(228, 228, 228);
+        box-sizing: content-box;
+        }
+
+    .titleout{
+        float: right;
+        width: 70%;
+        h1{
+        font-weight: bold;
+        font-size: 65px;
+        padding-top: 4rem;
+        margin: 0;
+        }
+        h2{
+            font-size: 32px;
+            padding-top: 0.5rem;
+            margin: 0;
+        }
+        p{       
+            font-size: 16px;
+            padding-top: 1.8rem;
+        }
     }
 }
-
 .button_padding{
     padding-left: 61em;
     padding-top: 7rem;
     padding-right: 3rem;
     display: flex;
 }
-
 .button {
     background: linear-gradient(to right, rgb(57, 187, 148) , rgb(131, 218, 174)); 
     border: none;
@@ -56,9 +61,7 @@
     list-style-type: none;
     margin-left: -10px;
     margin-top: -15px;
-    
 }
-
 .font_li2{
     font-size: 0.6rem;
     margin: 0;
@@ -68,14 +71,12 @@
     margin-left: -12px;
     margin-top: -5px;
 }
-
 .line  {
     border-right: 2px solid black;
     height: 55px;
     margin-left: 30px;
     top: 0;
 }
-
 .heading {
     text-align: left;
     padding-left: 26rem;
@@ -85,8 +86,6 @@
     color: grey;
     letter-spacing: 0.9rem;
 }
-
-
 .parent1 {
     background-color: white;
 }
@@ -96,7 +95,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
 .child1 {
     flex-shrink: 0;
     margin-top: -60px;
@@ -130,7 +128,6 @@
         text-transform: uppercase;
     }
   }
-
 .child1:hover{
         background: rgb(0, 0, 90);
         opacity: 0.8;
@@ -145,8 +142,6 @@
             visibility: visible;
         }
     }
-
-
 .child2 {flex-shrink: 0;
     margin-top: -60px;
     background: linear-gradient( rgb(250, 76, 105) 25%, white 25%, white 66.6%, white 66.6%);
@@ -179,7 +174,6 @@
         text-transform: uppercase;
     }
   }
-
 .child2:hover{
     background: rgb(250, 76, 105);
     opacity: 0.8;

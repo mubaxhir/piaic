@@ -6,7 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        ContentfulHome {
+        contentfulHome {
           edges {
             node {
               id

@@ -13,10 +13,16 @@ const Piaic = ({ data }) => {
 <Layout >
 
     <div className= {indexS.body} >
+      
     <div className = {indexS.title}>
+    
+    <img className={indexS.presidentimg} src={president["file"]["url"]}/>
+    <div className={indexS.titleout}>
   <h1>{title}</h1>
   <h2>{title2}</h2>
+  
   <p>{intro["intro"]}</p>
+  </div>
     </div>
     
     <div className= {indexS.button_padding}>
@@ -114,59 +120,59 @@ const Piaic = ({ data }) => {
                   <p>{vidtextfields["output"][0]["description"]}</p>
                 </div>
               </div>
-              </li>
-              <li className={indexS.vidobject} >
-              <div className={indexS.PresidentSaysVideoflexbox}>
-              <div className={indexS.vidlistimg2} ></div>
-              <div className={indexS.vidlistcontent}>
-              <h4 class="">{vidtextfields["output"][1]["title"]}</h4>
-              <p>{vidtextfields["output"][1]["description"]}</p>
-              </div>
-              </div>
-              </li>
-              <li className={indexS.vidobject} >
-              <div className={indexS.PresidentSaysVideoflexbox}>          
-              <div className={indexS.vidlistimg3} ></div>
+          </li>
+          <li className={indexS.vidobject} >
+          <div className={indexS.PresidentSaysVideoflexbox}>
+          <div className={indexS.vidlistimg2} ></div>
+          <div className={indexS.vidlistcontent}>
+          <h4 class="">{vidtextfields["output"][1]["title"]}</h4>
+          <p>{vidtextfields["output"][1]["description"]}</p>
+          </div>
+          </div>
+          </li>
+          <li className={indexS.vidobject} >
+          <div className={indexS.PresidentSaysVideoflexbox}>          
+          <div className={indexS.vidlistimg3} ></div>
 
-              <div className={indexS.vidlistcontent}>
-              <h4 class="">{vidtextfields["output"][2]["title"]}</h4>
-              <p>{vidtextfields["output"][2]["description"]}</p>
-              </div>
-              </div>
-              </li>
-              <li className={indexS.vidobject} >
-              <div className={indexS.PresidentSaysVideoflexbox}>           
-              <div className={indexS.vidlistimg4} ></div>
+          <div className={indexS.vidlistcontent}>
+          <h4 class="">{vidtextfields["output"][2]["title"]}</h4>
+          <p>{vidtextfields["output"][2]["description"]}</p>
+          </div>
+          </div>
+          </li>
+          <li className={indexS.vidobject} >
+          <div className={indexS.PresidentSaysVideoflexbox}>           
+          <div className={indexS.vidlistimg4} ></div>
 
-              <div className={indexS.vidlistcontent}>
-              <h4 class="">{vidtextfields["output"][3]["title"]}</h4>
-              <p>{vidtextfields["output"][3]["description"]}</p>
-              </div>
-              </div>
-              </li>
-              <li className={indexS.vidobject} >
-              <div className={indexS.PresidentSaysVideoflexbox}>          
-              <div className={indexS.vidlistimg5} ></div>
+          <div className={indexS.vidlistcontent}>
+          <h4 class="">{vidtextfields["output"][3]["title"]}</h4>
+          <p>{vidtextfields["output"][3]["description"]}</p>
+          </div>
+          </div>
+          </li>
+          <li className={indexS.vidobject} >
+          <div className={indexS.PresidentSaysVideoflexbox}>          
+          <div className={indexS.vidlistimg5} ></div>
 
-              <div className={indexS.vidlistcontent}>
-              <h4 class="">{vidtextfields["output"][4]["title"]}</h4>
-              <p>{vidtextfields["output"][4]["description"]}</p>
-              </div>
-              </div>
-              </li>
-              <li className={indexS.vidobject} >
-              <div className={indexS.PresidentSaysVideoflexbox}>          
-              <div className={indexS.vidlistimg6} ></div>
+          <div className={indexS.vidlistcontent}>
+          <h4 class="">{vidtextfields["output"][4]["title"]}</h4>
+          <p>{vidtextfields["output"][4]["description"]}</p>
+          </div>
+          </div>
+          </li>
+          <li className={indexS.vidobject} >
+          <div className={indexS.PresidentSaysVideoflexbox}>          
+          <div className={indexS.vidlistimg6} ></div>
 
-              <div className={indexS.vidlistcontent}>
-              <h4 class="">{vidtextfields["output"][5]["title"]}</h4>
-              <p>{vidtextfields["output"][5]["description"]}</p>
-              </div>
-              </div>
-              </li>
-              <li className={indexS.vidobject} >
-              <div className={indexS.PresidentSaysVideoflexbox}>            
-              <div className={indexS.vidlistimg7} ></div>
+          <div className={indexS.vidlistcontent}>
+          <h4 class="">{vidtextfields["output"][5]["title"]}</h4>
+          <p>{vidtextfields["output"][5]["description"]}</p>
+          </div>
+          </div>
+          </li>
+          <li className={indexS.vidobject} >
+          <div className={indexS.PresidentSaysVideoflexbox}>            
+          <div className={indexS.vidlistimg7} ></div>
 
                   <div className={indexS.vidlistcontent}>
                   <h4 class="">{vidtextfields["output"][6]["title"]}</h4>
@@ -256,7 +262,7 @@ const Piaic = ({ data }) => {
   <Link to="/cloud_native"><p>Cloud Native and Mobile Web Computing</p></Link>
   <Link to="/blockchain"><p>Blockchain</p></Link>
   <Link to="/internet_of_things"><p>Internet of Things and AI</p></Link>
-  <Link to="/thePresident"><p>About The President</p></Link>
+  <Link to="/about"><p>About The President</p></Link>
   <Link to="/managementComittee"><p>Management Comittee</p></Link>
   <Link to="/wit"><p>Women Inclusion in Technology (WIT)</p></Link>
   </div>
@@ -383,7 +389,12 @@ query MyQuery {
       }
     }
     heading6
-
+    allImages {
+      
+      file {
+        url
+      }
+    }
   }
 }
 `;
