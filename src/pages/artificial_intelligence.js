@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import AI from "../components/AI.module.scss"
 
-
 const Piaic = ({ data }) => {
   
     const {courseName,courseIntro,heading2,heading3,text,quarters,progStructure} = data.allContentfulCourse.edges[3].node;
@@ -19,8 +18,8 @@ const Piaic = ({ data }) => {
 
 
     <div className = {AI.page}>
-<h1>{heading2}</h1>
-<p>{text}</p>
+    <h1>{heading2}</h1>
+    <p>{text}</p>
     {/* <h2>and Deep Learning.</h2> */}
     </div>
 
@@ -44,39 +43,56 @@ const Piaic = ({ data }) => {
     </div>
     </div>
 
-
     <div className= {AI.line}><p></p></div>
 
 
-<div className= {AI.h1}><p>{heading3}</p></div>
+    <div className= {AI.h1}><p>Detailed Program Structure</p></div>
 
     
     <div className = {AI.parent}>
     <div className= {AI.parent1}>
     <div className= {AI.child}>
-    <img scr={require("../components/5.png")} height="50px" width="auto"alt=""/>
     <h1>{progStructure["_1"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img}></div>
     <p>{progStructure["_1"][1]}</p>
     </div>
+    </div>
+
     <div className= {AI.child}>
     <h1>{progStructure["_3"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img10}></div>
     <p>{progStructure["_3"][1]}</p>
+    </div>
     </div>
     <div className= {AI.child}>
     <h1>{progStructure["_5"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img3}></div>
     <p>{progStructure["_5"][1]}</p>
     </div>
-    <div className= {AI.child5}>
+    </div>
+    <div className= {AI.child}>
     <h1>{progStructure["_7"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img9}></div>
     <p>{progStructure["_7"][1]}</p>
+    </div>
     </div>
     <div className= {AI.child}>
     <h1>{progStructure["_9"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img8}></div>
     <p>{progStructure["_9"][1]}</p>
+    </div>
     </div>
     <div className= {AI.child2}>
     <h1>{progStructure["_11"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img7}></div>
     <p>{progStructure["_11"][1]}</p>
+    </div>
     </div>
     </div>
     
@@ -196,23 +212,38 @@ const Piaic = ({ data }) => {
     <div className= {AI.parent2}>
     <div className= {AI.child3}>
     <h1>{progStructure["_2"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img2}></div>
     <p>{progStructure["_2"][1]}</p>
+    </div>
     </div>
     <div className= {AI.child4}>
     <h1>{progStructure["_4"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img4}></div>
     <p>{progStructure["_4"][1]}</p>
+    </div>
     </div>
     <div className= {AI.child3}>
     <h1>{progStructure["_6"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img5}></div>
     <p>{progStructure["_6"][1]}</p>
+    </div>
     </div>
     <div className= {AI.child4}>
     <h1>{progStructure["_8"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img6}></div>
     <p>{progStructure["_8"][1]}</p>
+    </div>
     </div>
     <div className= {AI.child4}>
     <h1>{progStructure["_10"][0]}</h1>
+    <div className= {AI.flex2}>
+    <div className= {AI.img8}></div>
     <p>{progStructure["_10"][1]}</p>
+    </div>
     </div>
     </div>
     </div>
