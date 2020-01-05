@@ -17,6 +17,8 @@
     h2 {
         margin-top: -1rem;
         font-size: 0.95rem;
+        
+        text-align: center;
         color: white;
         font-weight: bold;
     }
@@ -173,7 +175,7 @@
     background-color: white;
     flex-grow: 1;
     width: 460px;
-    height: 70px;
+    height: 200px;
     flex-shrink: 0;
     border-radius: 0.4rem;
     text-align: left;

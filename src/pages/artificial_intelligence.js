@@ -3,40 +3,44 @@ import Layout from "../components/layout"
 import AI from "../components/AI.module.scss"
 
 
-
-export default () => <Layout>
+const Piaic = ({ data }) => {
+  
+    const {courseName,courseIntro,heading2,heading3,text,quarters,progStructure} = data.allContentfulCourse.edges[3].node;
+    
+    return (
+    <Layout>
     
     
     <div className = {AI.heading}>
-    <h1>Artificial Intelligence</h1> 
-    <p>A ONE YEAR AI PROGRAM DESIGNED FOR ABSOLUTE BEGINNERS.</p>
-    <h2>GETTING PAKISTAN READY FOR THE NEW ERA OF COMPUTING ENABLED BY THE RISE OF AI.</h2>
+<h1>{courseName}</h1> 
+<h2>{courseIntro.courseIntro}</h2>
+    {/* <h2>GETTING PAKISTAN READY FOR THE NEW ERA OF COMPUTING ENABLED BY THE RISE OF AI.</h2> */}
     </div>
 
 
     <div className = {AI.page}>
-    <h1>Program Structure</h1>
-    <p>A four-quarter AI program in Data Science, Machine Learning, </p>
-    <h2>and Deep Learning.</h2>
+<h1>{heading2}</h1>
+<p>{text}</p>
+    {/* <h2>and Deep Learning.</h2> */}
     </div>
 
 
     <div className= {AI.flex}>
     <div className= {AI.box1}>
     <h1>Quarter 1</h1>
-    <p>AI Foundations</p>
+    <p>{quarters._1}</p>
     </div>
     <div className= {AI.box2}>
     <h1>Quarter 2</h1>
-    <p>Introduction to Data Science & Deep Learning</p>
+    <p>{quarters._2}</p>
     </div>
     <div className= {AI.box3}>
     <h1>Quarter 3</h1>
-    <p>Deploying AI Solutions</p>
+    <p>{quarters._3}</p>
     </div>
     <div className= {AI.box4}>
     <h1>Quarter 4</h1>
-    <p>AI In Practice</p>
+    <p>{quarters._4}</p>
     </div>
     </div>
 
@@ -44,34 +48,35 @@ export default () => <Layout>
     <div className= {AI.line}><p></p></div>
 
 
-    <div className= {AI.h1}><p>Detailed Program Structure</p></div>
+<div className= {AI.h1}><p>{heading3}</p></div>
 
     
     <div className = {AI.parent}>
     <div className= {AI.parent1}>
     <div className= {AI.child}>
-    <h1>Version Control with Git</h1>
-    <p>You won't find a top programmer, web developer, or AI engineer who doesn't use version control. This is true because version control helps developers produce better results and makes collaboration easy. Around the world, in teams both large and small, Git is an essential part of the toolchain. This module covers Git and Github.</p>
+    <img scr={require("../components/5.png")} height="50px" width="auto"alt=""/>
+    <h1>{progStructure["_1"][0]}</h1>
+    <p>{progStructure["_1"][1]}</p>
     </div>
     <div className= {AI.child}>
-    <h1>Introduction to Linear Algebra and Statistics</h1>
-    <p>In this module, students will learn the basic mathematical and statistical concepts that are needed to practice data science and understand deep learning. Students will also implement these concepts in Python and TensorFlow.</p>
+    <h1>{progStructure["_3"][0]}</h1>
+    <p>{progStructure["_3"][1]}</p>
     </div>
     <div className= {AI.child}>
-    <h1>Data Science Essentials</h1>
-    <p>In this module, students will learn key concepts and techniques used to perform data science; including statistical analysis, data cleansing and transformation, and data visualization with Python.</p>
+    <h1>{progStructure["_5"][0]}</h1>
+    <p>{progStructure["_5"][1]}</p>
     </div>
     <div className= {AI.child5}>
-    <h1>Introduction to Linux and Bash</h1>
-    <p>Linux containers are poised to take over the world. In this module, students will begin learning with an introduction of Linux and the command line interface. For many non-technical people, the command line (also referred to as CLI, Terminal, bash, or shell) is a place of mystery. However, knowledge of only a handful of basic commands is enough to start feeling comfortable. In this module, we will cover the basic commands to get you started.</p>
+    <h1>{progStructure["_7"][0]}</h1>
+    <p>{progStructure["_7"][1]}</p>
     </div>
     <div className= {AI.child}>
-    <h1>Python Microservices Development</h1>
-    <p>In recent years, REST (REpresentational State Transfer) has emerged as the standard architectural design for web services and web APIs. In this module, students will learn how easy it is to create a RESTfulweb service using Python and Flask.</p>
+    <h1>{progStructure["_9"][0]}</h1>
+    <p>{progStructure["_9"][1]}</p>
     </div>
     <div className= {AI.child2}>
-    <h1>Artificial Intelligence (AI) in Practice</h1>
-    <p>This module is structured around a series of practical code examples, demonstrating on real world problems. PIAIC strongly believes in the value of teaching using concrete examples, anchoring theoretical ideas into actual results and tangible code patterns. These examples all rely on Keras, the Python deep learning library. Students will learn Deep Learning for computer vision, text and sequences, finance, and advanced neural network design.</p>
+    <h1>{progStructure["_11"][0]}</h1>
+    <p>{progStructure["_11"][1]}</p>
     </div>
     </div>
     
@@ -190,26 +195,74 @@ export default () => <Layout>
 
     <div className= {AI.parent2}>
     <div className= {AI.child3}>
-    <h1>Object Oriented and Functional Programming using Python</h1>
-    <p>In the second module of the program, students will learn about basic programming concepts such as lists, dictionaries, classes, functions and loops, and practice writing clean and readable code with exercises for each topic. Students will also learn how to make programs interactive and how to test code safely before adding it to a project. It is a fast-paced, thorough introduction to programming with Python 3.6 that will have students writing programs, solving problems, and making things that work in no time.</p>
+    <h1>{progStructure["_2"][0]}</h1>
+    <p>{progStructure["_2"][1]}</p>
     </div>
     <div className= {AI.child4}>
-    <h1>Advanced Python Libraries with Anaconda</h1>
-    <p>In this module, students will be introduced to Anaconda, the leading open data science platform powered by Python. The open source version of Anaconda is a high performance distribution of Python and R and includes over 100 of the most popular Python and R packages for data science, such as NumPy, Matplotlib, etc.</p>
+    <h1>{progStructure["_4"][0]}</h1>
+    <p>{progStructure["_4"][1]}</p>
     </div>
     <div className= {AI.child3}>
-    <h1>The Fundamentals of Deep Learning with Keras with TensorFlow Backend</h1>
-    <p>Before implementing deep-learning algorithms, students will first become familiar with the mathematical blocks of the neural networks theory. Students will get a chance to get their hands dirty writing some simple Keras code right away! Then they will move on to advanced deep learning concepts. This module will also cover some essential advantages of Keras to prove it’s the deep-learning library of choice.</p>
+    <h1>{progStructure["_6"][0]}</h1>
+    <p>{progStructure["_6"][1]}</p>
     </div>
     <div className= {AI.child4}>
-    <h1>Docker Deep Dive</h1>
-    <p>This module provides a soup-to-nuts learning experience for core Docker technologies, including the Docker Engine, Images, Containers, Registries, Networking, Storage, and more. All of the behind the scenes theory is explained, and all concepts are clearly demonstrated on the command line. No prior knowledge of Docker or Linux is required.</p>
+    <h1>{progStructure["_8"][0]}</h1>
+    <p>{progStructure["_8"][1]}</p>
     </div>
     <div className= {AI.child4}>
-    <h1>Build AI Microservices for ContainerDeployments</h1>
-    <p>In this module, students will learn to use containers to simplify AI solution deployments and implement continuous integration and deployment strategies.</p>
+    <h1>{progStructure["_10"][0]}</h1>
+    <p>{progStructure["_10"][1]}</p>
     </div>
     </div>
     </div>
     
 </Layout>
+
+);
+};
+
+export default Piaic;
+export const pageQuery = graphql`
+query useStaticQuery {
+    allContentfulCourse {
+        edges {
+          node {
+            courseName
+            courseIntro {
+              courseIntro
+            }
+            heading2
+            text
+            quarters {
+              _1
+              _2
+              _3
+              _4
+              _5
+              _6
+            }
+            heading3
+            progStructure {
+              _1
+              _2
+              _3
+              _4
+              _5
+              _6
+              _7
+              _8
+              _9
+              _10
+              _11
+              _12
+              _13
+              _14
+              _15
+            }
+          }
+        }
+      }
+    }    
+`;
+

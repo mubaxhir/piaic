@@ -3,46 +3,39 @@
     padding-bottom: 3rem;
 }
 
+.flex{
+    display: flex;
+}
+
 .title{
     padding-left: 2rem;
     padding-right: 5rem;
     padding-top: 4.3rem;
-    
-    presidentimg{
-        float: left;
-        position: 35px 102px;
-        background-size: 386px auto;
-        scroll-behavior: smooth;
-        background-color: rgb(228, 228, 228);
-        
-        }
 
     .titleout{
-        float: right;
-        max-width: 70%;
         h1{
         font-weight: bold;
-        font-size: 65px;
-        padding-top: 4rem;
-        margin: 0;
+        font-size: 62px;
+        padding-top: 2rem;
+        margin-left: 6rem;
         }
         h2{
             font-size: 32px;
-            padding-top: 0.5rem;
-            margin: 0;
+            margin-left: 6rem;
+            margin-top: -2rem;
+            font-weight: lighter;
         }
         p{       
             font-size: 16px;
             padding-top: 1.8rem;
+            margin-left: 6rem;
+            margin-right: 2rem;
         }
     }
 }
 .button_padding{
-    
-    padding-top: 7rem;
-    padding-right: 3rem;
+    margin: -15rem 3rem 0rem 61em;
     display: flex;
-    float: right;
 }
 .button {
     background: linear-gradient(to right, rgb(57, 187, 148) , rgb(131, 218, 174)); 
@@ -104,17 +97,15 @@
     height: 180px;
     width: 280px;
     border-radius: 0.5rem;
-    font-size: 1.2rem;
     margin-left: 1.9rem;
     text-align: center;
-    line-height: 170px;
     box-shadow: 3px 3px 4px lightgray;
     button {
        height: 180px;
        width: 296px;
        border: none;
        background: none;
-       font-size: 1.2rem;
+       font-size: 1rem;
        color: rgb(0, 0, 90);
        font-weight: bold;
        position: absolute;
@@ -150,17 +141,15 @@
     height: 180px;
     width: 280px;
     border-radius: 0.5rem;
-    font-size: 1.2rem;
     margin-left: 1.9rem;
     text-align: center;
-    line-height: 170px;
     box-shadow: 3px 3px 4px lightgray;
     button {
         height: 180px;
         width: 296px;
         border: none;
         background: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: rgb(250, 76, 105);
         font-weight: bold;
         position: absolute;
@@ -183,7 +172,7 @@
         color:rgba(250, 76, 105, 0.8);
     }
     p {
-        margin-top: -4rem;
+        margin-top: -5em;
     }
     h1{
         visibility: visible;
@@ -198,17 +187,15 @@
     height: 180px;
     width: 280px;
     border-radius: 0.5rem;
-    font-size: 1.2rem;
     margin-left: 1.9rem;
     text-align: center;
-    line-height: 170px;
     box-shadow: 3px 3px 4px lightgray;
     button {
         height: 180px;
         width: 296px;
         border: none;
         background: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: rgb(255, 238, 0);
         font-weight: bold;
         position: absolute;
@@ -246,17 +233,15 @@
     height: 180px;
     width: 280px;
     border-radius: 0.5rem;
-    font-size: 1.2rem;
     margin-left: 1.9rem;
     text-align: center;
-    line-height: 170px;
     box-shadow: 3px 4px 4px lightgray;
     button {
         height: 180px;
         width: 296px;
         border: none;
         background: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: rgb(39, 133, 139);
         font-weight: bold;
         position: absolute;
@@ -613,6 +598,7 @@ font-weight: 500;
 line-height: 1.2;
 color: #04c492!important;
 text-decoration: underline;
+font-family: myfontRegular;
 font-size: 13px;
 text-align: left;
 margin: 0 0 4px;
@@ -679,6 +665,9 @@ height: 100%;
         color: white;
         font-weight: lighter;
     }
+    a{
+        text-decoration: none;
+    }
 }
 
 .address2 {
@@ -698,6 +687,9 @@ height: 100%;
         font-size: 0.7rem;
         color: white;
         font-weight: lighter;
+    }
+    a{
+        text-decoration: none;
     }
 }
 
@@ -721,6 +713,9 @@ height: 100%;
         color: white;
         font-weight: lighter;
     }
+    a{
+        text-decoration: none;
+    }
 }
 .super {
     background-color: rgb(0, 221, 173);
@@ -740,20 +735,18 @@ height: 100%;
 }
 
 .image{
-    flex-shrink: 0;   
-    width: 700px;
-    height: 400px;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-image: url("./3.jpg");
-    margin-left: 1.5rem;
-    // margin-right: 2rem;
-    margin-top: 4.5rem;
-    img{
-        max-width: 650px;
-    }
-    }
-   
+flex-shrink: 0;   
+width: 700px;
+height: 400px;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url("./1.jpg");
+margin-left: 1.5rem;
+margin-right: 2rem;
+margin-top: 4.5rem;
+
+}
+
 .text {
     height: 350px;
     width: 470px;
@@ -786,32 +779,26 @@ height: 100%;
 
 .image2{
     flex-shrink: 0;   
-        width: 700px;
-        height: 400px;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-image: url("./3.jpg");
-        margin-left: 1.5rem;
-        // margin-right: 2rem;
-        margin-top: 4.5rem;
-        img{
-            max-width: 650px;
-        }
-        }
+    width: 700px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-image: url("./2.jpg");
+    margin-left: 1.5rem;
+    margin-right: 2rem;
+    margin-top: 4.5rem;
+    }
 
 .image3{
         flex-shrink: 0;   
         width: 700px;
         height: 400px;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-image: url("./3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("./3.jpg");
         margin-left: 1.5rem;
-        // margin-right: 2rem;
+        margin-right: 2rem;
         margin-top: 4.5rem;
-        img{
-            max-width: 650px;
-        }
+        
         }
 
 .text2{
@@ -851,7 +838,6 @@ height: 100%;
 .logos{
     display: flex;
     margin-left: 28rem;
-    margin-top: 3rem;
 }
 .items {
     margin-right: 4rem;
@@ -861,7 +847,8 @@ height: 100%;
     display: flex;
 }
 .x{
-    // width: 40rem;
-    // height: 40rem;
     margin-right: 1rem;
+    img{
+        margin-top: 0.5rem;
+    }
 }

@@ -29,18 +29,10 @@
     }
 }
 .main{
-    z-index: 0;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    box-sizing: border-box;
-    width: 100vw;
-    position: relative;
-    height: 40vw!important;
-    background-position: center 10px;
-    background-size: 120%;
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-size: 125%;
     background-repeat: no-repeat;
     background-color: #ddd;
     background-image: url("./witIcon.jpeg");
