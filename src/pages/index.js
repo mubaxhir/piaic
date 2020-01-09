@@ -256,7 +256,7 @@ const Piaic = ({ data }) => {
   <Link to="/artificial_intelligence"><p>Artificial Intelligence</p></Link>
   <Link to="/cloud_native"><p>Cloud Native and Mobile Web Computing</p></Link>
   <Link to="/blockchain"><p>Blockchain</p></Link>
-  <Link to="/internet_of_things"><p>Internet of Things and AI</p></Link>
+  <Link to="/iot"><p>Internet of Things and AI</p></Link>
   <Link to="/about"><p>About The President</p></Link>
   <Link to="/managementComittee"><p>Management Comittee</p></Link>
   <Link to="/wit"><p>Women Inclusion in Technology (WIT)</p></Link>
