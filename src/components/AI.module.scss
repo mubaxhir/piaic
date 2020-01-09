@@ -47,7 +47,11 @@
 
 .flex {
     padding: 5rem 3.5rem 5rem 2rem;
-    display: flex;
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,270px));
+    margin-left: 3rem;
+    margin-right: -5rem;
 }
 .box1 {
     background-color: white;
@@ -156,12 +160,25 @@
     text-align: center;
 }
 
-.parent{
+.parent,.parent2{
     display: flex;
-    flex-wrap: wrap;
     padding-right: 3rem;
     padding-left: 4rem;
 }
+
+@media screen and (min-width: 601px) {
+  div.parent ,.parent2{
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.parent ,.parent2{
+    font-size: 30px;
+  }
+}
+
 .flex2{
     display: flex;
     flex-wrap: wrap;

@@ -42,7 +42,11 @@
 
 .flex {
     padding: 5rem 3.5rem 5rem 2rem;
-    display: flex;
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,270px));  
+    margin-left: 3rem; 
+    margin-right: -5rem;
 }
 .box1 {
     background-color: white;
@@ -143,7 +147,14 @@
     margin-right: 43rem;
     margin-left: 2rem;
 }
-
+// .flex2 {
+//     grid-gap: 4rem;
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit,minmax(250px,270px));  
+//     margin-left: 5rem; 
+//     margin-right: -5rem;
+    
+// }
 .box5 {
     background-color: rgba(39, 132, 139, 0.8);
     flex-grow: 1;
@@ -153,7 +164,7 @@
     border-radius: 0.4rem;
     text-align: center;
     margin-left: 1.9rem;
-    margin-top: -2rem;
+    margin-top: 2rem;
     box-shadow: 0 0 25px gray;
     h1{
         padding-top: 4.5rem;
@@ -177,7 +188,7 @@
     border-radius: 0.4rem;
     text-align: center;
     margin-left: 1.9rem;
-    margin-top: -2rem;
+    margin-top: 2rem;
     box-shadow: 0 0 25px gray;
     h1{
         padding-top: 4.5rem;
@@ -207,14 +218,14 @@
     padding-bottom: 2rem;
     text-align: center;
 }
-.flex2{
-    display: flex;
-    flex-wrap: wrap;
-    p{
-        width:75%;
-        margin-top: -0.2rem;
-    }
-}
+// .flex2{
+//     display: flex;
+//     flex-wrap: wrap;
+//     p{
+//         width:75%;
+//         margin-top: -0.2rem;
+//     }
+// }
 .img{
     background-image: url("../components/40.jpg");
     background-repeat: no-repeat;

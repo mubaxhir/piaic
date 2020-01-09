@@ -41,7 +41,11 @@
 
 .flex {
     padding: 5rem 3.5rem 5rem 2rem;
-    display: flex;
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,270px));  
+    margin-left: 3rem; 
+    margin-right: -5rem;
 }
 .box1 {
     background-color: white;

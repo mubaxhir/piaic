@@ -39,8 +39,6 @@ const Piaic = ({ data }) => {
     <h1>Quarter 4</h1>
     <p>{quarters._4}</p>
     </div>
-    </div>
-    <div className= {IOT.flex3}>
     <div className= {IOT.box5}>
     <h1>Quarter 5</h1>
     <p>{quarters._5}</p>
@@ -50,6 +48,9 @@ const Piaic = ({ data }) => {
     <p>{quarters._6}</p>
     </div>
     </div>
+    {/* <div className= {IOT.flex3}> */}
+    
+    {/* </div> */}
 
 
     <div className= {IOT.line}><p></p></div>

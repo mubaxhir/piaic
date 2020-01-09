@@ -31,7 +31,7 @@ const Header = props => {
       
         
       <Navbar className={headerStyles.headermain}>
-      <NavbarBrand>
+      <NavbarBrand href="/">
           <img src={Logo} className={headerStyles.image} />
         </NavbarBrand>  
       <div><Link to ="./"/></div>

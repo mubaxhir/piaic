@@ -1,9 +1,3 @@
-.header{
-    position: fixed;
-    width: 100%;
-    z-index: 111111;
-    margin-left: 0;
-}
 .headermain {
     display: flex;
     background-color: #01645f !important;
@@ -27,7 +21,7 @@
 
 }
 .image{
-    position: fixed;
+    position: absolute;
     height: 250px;
     width: 90px;
     top:0;
