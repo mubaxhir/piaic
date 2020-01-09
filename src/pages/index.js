@@ -57,7 +57,7 @@ const Piaic = ({ data }) => {
       <h1>{courses["description3"]}</h1>
       </div>
       <div className= {indexS.child4}>
-      <Link to="/internet_of_things"><button><p>{courses["name4"]}</p></button></Link>
+      <Link to="/iot"><button><p>{courses["name4"]}</p></button></Link>
       <h1>{courses["description4"]}</h1>
       </div>
       </div>
