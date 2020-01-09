@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import Layout from "../components/layout"
 import indexS from '../components/index.module.scss'
 
+
 const Piaic = ({ data }) => {
   
   const {president,title,title2,intro,applications,heading2,courses,heading3,list,heading4,vidtextfields,imageTags,allImages,imageText1,imageText2,imageText3,heading5,heading6,refrences} = data.contentfulHome;
@@ -14,22 +15,21 @@ const Piaic = ({ data }) => {
       
    
     <div className = {indexS.flex}>
-    <div className = {indexS.title}><img src={president["file"]["url"]}/>
+    <div className = {indexS.title}><img src={president["file"]["url"]}/></div>
     <div className={indexS.titleout}>
     <h1>{title}</h1>
     <h2>{title2}</h2>
-    <p>{intro["intro"]}</p>
+    <p>{intro["intro"]}</p></div>
     </div>
     </div>
-    </div>
-    </div>
+    
     
     <div className= {indexS.button_padding}>
     <div><a href="https://portal.piaic.org/signup" target="_blank"><p className= {indexS.button}> Apply </p></a></div>
     <div className= {indexS.line}> </div>
     <ul >
         <li className= {indexS.font_li}>
-          {applications}k+ 
+  {applications}k+ 
         </li>
         <li className= {indexS.font_li2}>
         Applications Recieved
@@ -57,11 +57,13 @@ const Piaic = ({ data }) => {
       <h1>{courses["description3"]}</h1>
       </div>
       <div className= {indexS.child4}>
-      <Link to="/internet_of_things"><button><p>{courses["name4"]}</p></button></Link>
+      <Link to="/iot"><button><p>{courses["name4"]}</p></button></Link>
       <h1>{courses["description4"]}</h1>
       </div>
       </div>
       </div>
+      
+
       <div >
         <p className= {indexS.line2}></p>
       </div>
@@ -195,10 +197,11 @@ const Piaic = ({ data }) => {
   <h1>{heading5}</h1>
   <div className={indexS.spotlight2}>
   <div className={indexS.spotlight}>
-  <div className={indexS.image}></div>
+  <div className={indexS.image}>
+  </div>
   <div className={indexS.text}>
-      <h2>{imageTags[0]}</h2>
-      <p>{imageText1['imageText1']}</p>
+  <h2>{imageTags[0]}</h2>
+<p>{imageText1['imageText1']}</p>
   </div>
   </div>
 
@@ -224,21 +227,21 @@ const Piaic = ({ data }) => {
   </div>
 
   <div className={indexS.partner}>
-      <h1>{heading6}</h1>
-      <div className={indexS.logos}>
-        <div className={indexS.items}>
-            <a href="https://www.panacloud.ai/" target = "_blank" ><img src={require("../components/1.svg")}  alt="klnaznc" /></a>
-        </div>
+<h1>{heading6}</h1>
+  <div className={indexS.logos}>
+  <div className={indexS.items}>
+  <a href="https://www.panacloud.ai/" target = "_blank" ><img src={require("../components/1.svg")}  alt="klnaznc" /></a>
+  </div>
 
-      <div className={indexS.items}>
-            <a href="https://www.psx.com.pk/" target = "_blank" ><img src={require("../components/2.png")}  alt="klnaznc" /></a>
-      </div>
+  <div className={indexS.items}>
+  <a href="https://www.psx.com.pk/" target = "_blank" ><img src={require("../components/2.png")}  alt="klnaznc" /></a>
+  </div>
 
-      <div className={indexS.items}>
-          <a href="http://www.saylaniwelfare.com/home" target = "_blank" ><img src={require("../components/3.png")} alt="klnaznc" /></a>
-      </div>
+  <div className={indexS.items}>
+  <a href="http://www.saylaniwelfare.com/home" target = "_blank" ><img src={require("../components/3.png")} alt="klnaznc" /></a>
+  </div>
 
-      </div>
+  </div>
 
 
   </div>
@@ -246,17 +249,17 @@ const Piaic = ({ data }) => {
   <div className= {indexS.head}>
   
   <div className= {indexS.address}>
-      <h1>Navigation</h1>
-      <Link  to="/"><p>Home</p></Link>
-      <a href="https://portal.piaic.org/signup" target = "_blank"> <p>Apply</p></a>
-      <Link to="/howItsWork"><p>How It Works</p></Link>
-      <Link to="/artificial_intelligence"><p>Artificial Intelligence</p></Link>
-      <Link to="/cloud_native"><p>Cloud Native and Mobile Web Computing</p></Link>
-      <Link to="/blockchain"><p>Blockchain</p></Link>
-      <Link to="/internet_of_things"><p>Internet of Things and AI</p></Link>
-      <Link to="/about"><p>About The President</p></Link>
-      <Link to="/managementComittee"><p>Management Comittee</p></Link>
-      <Link to="/wit"><p>Women Inclusion in Technology (WIT)</p></Link>
+  <h1>Navigation</h1>
+  <Link  to="/"><p>Home</p></Link>
+  <a href="https://portal.piaic.org/signup" target = "_blank"> <p>Apply</p></a>
+  <Link to="/howItsWork"><p>How It Works</p></Link>
+  <Link to="/artificial_intelligence"><p>Artificial Intelligence</p></Link>
+  <Link to="/cloud_native"><p>Cloud Native and Mobile Web Computing</p></Link>
+  <Link to="/blockchain"><p>Blockchain</p></Link>
+  <Link to="/iot"><p>Internet of Things and AI</p></Link>
+  <Link to="/about"><p>About The President</p></Link>
+  <Link to="/managementComittee"><p>Management Comittee</p></Link>
+  <Link to="/wit"><p>Women Inclusion in Technology (WIT)</p></Link>
   </div>
 
   <div className= {indexS.address2}>
@@ -390,4 +393,3 @@ query MyQuery {
   }
 }
 `;
-

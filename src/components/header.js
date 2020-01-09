@@ -65,7 +65,7 @@ const Header = props => {
                 <DropdownItem className={headerStyles.options}> <Link to="./artificial_intelligence" className={headerStyles.pages}>Artificial inteligence</Link> </DropdownItem>
                 <DropdownItem className={headerStyles.options}><Link to="./cloud_native" className={headerStyles.pages}>Cloud Native and Mobile Web</Link> </DropdownItem>
                 <DropdownItem className={headerStyles.options}><Link to="./blockchain" className={headerStyles.pages}>Blockchain</Link> </DropdownItem>
-                <DropdownItem className={headerStyles.options}><Link to="./internet_of_things" className={headerStyles.pages}>Internet Of Things</Link> </DropdownItem>
+                <DropdownItem className={headerStyles.options}><Link to="./iot" className={headerStyles.pages}>Internet Of Things</Link> </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
