@@ -21,7 +21,6 @@ const Piaic = ({ data }) => {
 <p>{text}</p>
     </div>
 
-
     <div className= {IOT.flex}>
     <div className= {IOT.box1}>
     <h1>Quarter 1</h1>
