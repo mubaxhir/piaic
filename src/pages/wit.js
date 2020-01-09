@@ -6,7 +6,7 @@ import WIT from "../components/WIT.module.scss"
 
 export default () => <Layout>
   <div className={WIT.super}>
-  <div className={WIT.main}></div>
+  <div className={WIT.main}><img src={"../components/witIcon.jpeg" } alt="mainIcon" /></div>
 
   <p>The Women Empowerment Division of the Presidential Initiative for Artificial Intelligence & Computing is committed to the empowerment and autonomy of women in Pakistan.</p>
   <p>The single most important channel for the empowerment of women is education. The Women Empowerment Division is committed to providing the best technical education in the world with the flexibility to allow just about anyone to participate and improve their lives. The primary objective of the Women Empowerment Division is to provide a platform via which women can receive education and training to jumpstart their careers in the global technology industry.</p>
@@ -21,6 +21,7 @@ export default () => <Layout>
   <div className={WIT.image2}></div>
   <div className={WIT.image3}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image4}></div>
   <div className={WIT.image5}></div>
@@ -32,33 +33,40 @@ export default () => <Layout>
   <div className={WIT.image8}></div>
   <div className={WIT.image9}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image10}></div>
   <div className={WIT.image11}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image12}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image13}></div>
   <div className={WIT.image14}></div>
   <div className={WIT.image15}></div>
   <div className={WIT.image17}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image18}></div>
   <div className={WIT.image19}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image20}></div>
   <div className={WIT.image21}></div>
   <div className={WIT.image22}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image23}></div>
   <div className={WIT.image24}></div>
   <div className={WIT.image25}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image26}></div>
   <div className={WIT.image27}></div>
@@ -66,36 +74,43 @@ export default () => <Layout>
   <div className={WIT.image29}></div>
   <div className={WIT.image30}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image31}></div>
   <div className={WIT.image32}></div>
   <div className={WIT.image33}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image34}></div>
   <div className={WIT.image35}></div>
   <div className={WIT.image36}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image37}></div>
   <div className={WIT.image38}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image39}></div>
   <div className={WIT.image40}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image41}></div>
   <div className={WIT.image42}></div>
   <div className={WIT.image43}></div>
   <div className={WIT.image44}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image45}></div>
   <div className={WIT.image46}></div>
   <div className={WIT.image47}></div>
   <div className={WIT.image48}></div>
   </div>
+
   <div className={WIT.spotlight}>
   <div className={WIT.image49}></div>
   <div className={WIT.image50}></div>
@@ -111,6 +126,7 @@ export default () => <Layout>
   <div className={WIT.image54}></div>
   <div className={WIT.image55}></div>
   </div>
+  
   <div className={WIT.spotlight}>
   <div className={WIT.image56}></div>
   <div className={WIT.image57}></div>

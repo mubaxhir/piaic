@@ -2,24 +2,26 @@ import React from "react"
 import Layout from "../components/layout"
 import MG from "../components/MG.module.scss"
 
-
-
-export default () => <Layout>
+const Piaic = ({ data }) => {
+  
+    const {images} = data.contentfulManegmentcommitee ;
+    
+    return ( <Layout>
     <div className = {MG.page}>
     <h1>Management Committee</h1>
     </div>
 
-
+    <div className={MG.parentdiv}>
     <div className= {MG.flex}>
     <div className= {MG.box1}>
-    <div className= {MG.img2}></div>
-    <h1>Kazi Rahat Ali</h1>
-    <p>General Secretary PIAIC</p>
+    <div className= {MG.img2}><img src={images[0].file.url} /></div>
+    <h1>{images[0].title}</h1>
+    <p>{images[0].description}</p>
     </div>
     <div className= {MG.box1}>
-    <div className= {MG.img2}></div>
-    <h1>Zia Ullah Khan</h1>
-    <p>CEO - Panacloud Pvt. Ltd.</p>
+    <div className= {MG.img2}><img src={images[1].file.url} /></div>
+    <h1>{images[1].title}</h1>
+    <p>{images[1].description}</p>
     <div className= {MG.logo}>
     <div className= {MG.img}><a href="https://www.facebook.com/ziakhan" target = "_blank" ><img src={require("../components/15.png")} width="30" height="auto"  alt="klnaznc" /></a></div>
     <div ><a href="https://twitter.com/ziakhan" target = "_blank" ><img src={require("../components/13.png")} width="60" height="auto"  alt="klnaznc" /></a></div>
@@ -27,21 +29,19 @@ export default () => <Layout>
     </div>
     </div>
     <div className= {MG.box1}>
-    <div className= {MG.img2}></div>
-    <h1>Yousuf Lakhani</h1>
-    <p>President - Saylani Welfare Trust</p>
+    <div className= {MG.img2}><img src={images[2].file.url} /></div>
+    <h1>{images[2].title}</h1>
+    <p>{images[2].description}</p>
     <div ><a href="https://www.facebook.com/saylaniwelfare/?_rdc=1&_rdr" target = "_blank" ><img src={require("../components/15.png")} width="30" height="auto"  alt="klnaznc" /></a></div>
     </div>
-    </div>
-    <div className= {MG.flex2}>
     <div className= {MG.box1}>
-    <div className= {MG.img2}></div>
-    <h1>Sulaiman Mehdi</h1>
-    <p>Chairman of The Board - Pakistan Stock Exchange</p>
+    <div className= {MG.img2}><img src={images[3].file.url} /></div>
+    <h1>{images[3].title}</h1>
+    <p>{images[3].description}</p>
     <div className= {MG.img3}><a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFN7WFxUDBBZgAAAW9qZJAImnSXljS5YKP6Ip6kpCY2E29sxpAM2mqy4RbRkWpzwSZgeQngeOHmHImK4QO9Pds-sfhYBAFBx0q0dane62G4TifrcowXrgToPmLf7qp0cyDnoUA=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fsulaiman-s-mehdi-fcis-44275773%2F" target = "_blank" ><img src={require("../components/18.png")} width="60" height="auto"  alt="klnaznc" /></a></div>
     </div>
     </div>
-
+    </div>
     <div className= {MG.line}></div>
 
    <div className={MG.partner}>
@@ -65,3 +65,23 @@ export default () => <Layout>
    </div>
     
 </Layout>
+
+
+);
+};
+
+export default Piaic;
+export const pageQuery = graphql`
+query manegmentQuery {
+    contentfulManegmentcommitee {
+        images {
+          title
+          description
+          file {
+            url
+          }
+        }
+      }
+}
+`;
+

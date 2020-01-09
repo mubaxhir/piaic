@@ -9,16 +9,31 @@
     }
 }
 
-.flex {
-    padding: 5rem 17rem 5rem 14rem;
+.parentdiv{
     display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center!important;
+    justify-content: center;
+    
 }
 .box1 {
     background-color: white;
+    margin-top: 3rem!important;
     flex-grow: 1;
-    width: 50px;
+    max-width: 220px;
+    width: 200px;
     height: 320px;
-    flex-shrink: 0;
+    flex-shrink: 1;
+    display: grid;
     border-radius: 0.4rem;
     text-align: center;
     margin-left: 3rem;
@@ -29,6 +44,7 @@
         font-size: 1.5rem;
         color:black;
         font-weight: bold;
+        margin-top: 30px;
     }
     p {
         font-size: 0.8rem;
@@ -50,17 +66,20 @@
     height: 150px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("./16.jpg");
-    border-radius: 50%;
-    border: thick solid rgb(67, 255, 177);
+    // background-image: url("./16.jpg");
+    
     margin-left: 1.3rem;
     margin-top: 1rem;
     margin-bottom: -5rem;
-}
-.flex2 {
-    padding: 0rem 52.6rem 5rem 14rem;
-    display: flex;
-    margin-top: -1rem;
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: thick solid rgb(67, 255, 177);
+        // background-image: url("./16.jpg");
+        border-radius: 50%;
+        
+    }
 }
 
 .partner {
@@ -77,8 +96,8 @@
 }
 .logos{
     display: flex;
-    margin-left: 28rem;
-    margin-top: 3rem;
+    justify-content: center;
+    margin-left: 9rem;
 }
 .items {
     margin-right: 4rem;

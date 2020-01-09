@@ -1,0 +1,137 @@
+.logo{
+    margin-top: 7px;
+    position : fixed;
+    z-index: 1111;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  z-index: 111;
+}
+
+.nav {
+    position: fixed;
+    font-size: 0.9em;
+    color: white;
+    float: right; /* Clear floats */
+    width: 100%;
+    top: 0 ;
+    margin: 0;
+    list-style: none;
+    font-weight: lighter;
+    background: linear-gradient(to right, rgb(67, 109, 98) , rgb(27, 95, 75));
+    z-index: 111;
+    
+}
+.parent {
+    margin-right: 3rem;
+}
+.nav div {  
+    z-index: 111;
+    // position: relative;
+    justify-self: flex-end;
+    float: right;
+    background-color: inherit;
+    .checkbutton{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    float: right;
+    display: none;
+    }
+    p {
+        padding: 0.7em;
+        color: white; 
+        margin-right: 2rem;
+        padding-right: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .htmbutton{
+        width: 50%;
+    } 
+}
+.nav p:hover{
+    color: rgb(118, 224, 193);
+}
+
+/*--- DROPDOWN ---*/
+.nav__sub_menu {
+    background:  linear-gradient(to right, rgb(85, 107, 101) , rgb(5, 75, 54));
+    padding:0;
+    margin-top: -1.2rem;
+    list-style: none;
+    position: absolute;
+    display: none; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+
+.nav__sub_menu li {
+    float: left;
+    padding: 0em;
+    line-height: 0rem;
+    border-bottom: 1.4px solid rgb(118, 224, 193);
+    width: 100%;
+    a{
+        text-decoration: none;
+    }
+}
+
+.nav__sub_menu p{
+    white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+
+.nav li:hover ul{ /* Display the dropdown on hover */
+    left: 0; /* Bring back on-screen when needed */
+}
+
+// @media (max-width : 990px){
+//     .logo{
+//         width: 70px ;
+//         height:70px;
+//         margin-top: 10px;
+//         margin-left: 25px;
+//         padding: 0;
+//         position: fixed;
+//         img{
+//             width: 100%;
+//         }
+//     }
+    
+
+//     .nav {
+//         position: fixed;
+//         width: 100%;
+//         height: 67px;
+//         left: 0px;
+//         text-align: center;
+//         .divs{
+//             display: none;
+            
+//         }
+//         .checkbtn{
+//             display: flex;
+//             box-sizing: border-box;
+//             margin: 10px;
+//             background-image: url("./htmbutton.png");
+//             background-repeat: no-repeat;
+//             button{
+//             background-color: unset;
+//             height: auto;
+//             cursor: pointer;
+//             box-sizing: border-box;
+//             height: 47px;
+//             width: 47px;
+//             }
+//             height: auto;
+//         }
+//     }
+// }
+
+// @media (min-width : 991px){
+// .checkbtn{
+//     display: none;
+// }
+}

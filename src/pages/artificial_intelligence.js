@@ -4,7 +4,7 @@ import AI from "../components/AI.module.scss"
 
 const Piaic = ({ data }) => {
   
-    const {courseName,courseIntro,heading2,heading3,text,quarters,progStructure} = data.allContentfulCourse.edges[3].node;
+    const {courseName,courseIntro,heading2,heading3,text,quarters,progStructure} = data.allContentfulCourse.edges[1].node;
     
     return (
     <Layout>
@@ -46,7 +46,7 @@ const Piaic = ({ data }) => {
     <div className= {AI.line}><p></p></div>
 
 
-    <div className= {AI.h1}><p>Detailed Program Structure</p></div>
+<div className= {AI.h1}><p>{heading3}</p></div>
 
     
     <div className = {AI.parent}>
@@ -88,7 +88,7 @@ const Piaic = ({ data }) => {
     </div>
     </div>
     <div className= {AI.child2}>
-    <h1>{progStructure["_11"][0]}</h1>
+    <h1>{progStructure._11[0]}</h1>
     <div className= {AI.flex2}>
     <div className= {AI.img7}></div>
     <p>{progStructure["_11"][1]}</p>
@@ -255,7 +255,7 @@ const Piaic = ({ data }) => {
 
 export default Piaic;
 export const pageQuery = graphql`
-query useStaticQuery {
+query usetaticQuery {
     allContentfulCourse {
         edges {
           node {

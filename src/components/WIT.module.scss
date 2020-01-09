@@ -29,13 +29,19 @@
     }
 }
 .main{
-    height: 600px;
-    width: 100%;
-    background-position: center;
-    background-size: 125%;
-    background-repeat: no-repeat;
-    background-color: #ddd;
-    background-image: url("./witIcon.jpeg");
+    height: auto;
+    width: auto;
+    align-content: center;
+    img{
+       height: auto;
+       justify-self: center;
+        width: auto; 
+    }
+    // background-position: center;
+    // background-size: 125%;
+    // background-repeat: no-repeat;
+    // background-color: #ddd;
+    // background-image: url("./witIcon.jpeg");
 }
 .line {
     border-top: 1.5px solid black;

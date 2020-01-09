@@ -1,62 +1,96 @@
-import React from "react"
-import { Link } from 'gatsby'
-import HeaderS from './header.module.scss'
+import headerStyles from "./header.module.scss"
+import {Link} from 'gatsby'
+import Logo from "./piaic.svg"
+import React, { useState } from "react"
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText,
+  Icon,
+} from "reactstrap"
+
+const Header = props => {
 
 
+  const [isOpen, setIsOpen] = useState(true)
+  const toggle = () => setIsOpen(!isOpen)
 
-export default () => <header >
-<div className={HeaderS.checked}>
-<input type = "checkbox" id = "check"></input>
-<label for="check" className="{headerStyle.checkbtn}">
-  <i class="fas fa-bars"></i>
-</label>
-<ul className = {HeaderS.nav}>
-  <li><Link><p></p></Link></li>
-  <li >
-  <Link to="/wit"><p>WIT</p></Link>
-  </li>
-  <li>
-  <p>About</p>
-  <ul className={HeaderS.nav__sub_menu}>
-  <li>
-  <Link to="/about"><p>The President</p></Link>
-  </li>
-  <li>
-  <Link to="/managementComittee"><p>Management Comittee</p></Link>
-  </li>
-  </ul>
-  </li>
-  <li>
-  <p>Avalaible Program</p>
-  <ul className={HeaderS.nav__sub_menu}>
-  <li>
-  <Link to="/artificial_intelligence"><p>Artificial Intelligence</p></Link>
-  </li>
-  <li>
-  <Link to="/cloud_native"><p>Cloud Native and Mobile Web Computing</p></Link>
-  </li>
-  <li>
-  <Link to="/blockchain"><p>Blockchain</p></Link>
-  </li>
-  <li>
-  <Link to="/internet_of_things"><p>Internet of Things and AI</p></Link>
-  </li>
-  </ul>
-  </li>
-  <li>
-  <a href="https://portal.piaic.org/signup" target = "_blank"> <p>Apply</p></a>
-  </li>
-  <li>
-  <Link to="/howItsWork"><p>How It Works</p></Link>
-  </li>
-</ul>
-</div>
-    
-    
 
-    <div className= {HeaderS.logo}>
-     <Link  to="/"  ><img src={require("./piaic.svg")} width="150" height="120"  alt="" /></Link>
+  return (
+    <div className={headerStyles.header}>
+      
+      
+        
+      <Navbar className={headerStyles.headermain}>
+      <NavbarBrand>
+          <img src={Logo} className={headerStyles.image} />
+        </NavbarBrand>  
+      <div><Link to ="./"/></div>
+
+        <div className={headerStyles.maindiv}>
+        <Collapse isOpen={isOpen} navbar className={headerStyles.navbarcollaps}>
+
+          <Nav navbar>
+            <NavItem>
+
+              <NavLink className={headerStyles.links} id={headerStyles.how_works}>
+                <Link to="./howItsWork" className={headerStyles.pages}  >
+                How it works
+                </Link>
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+              <NavLink className={headerStyles.links}>
+              <a href="https://portal.piaic.org/signup" className={headerStyles.pages}>
+              Apply
+                </a>  
+              </NavLink>
+            </NavItem>
+
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret className={headerStyles.links}>
+                Available programs
+              </DropdownToggle>
+              <DropdownMenu right className={headerStyles.dropdown}>
+                <DropdownItem className={headerStyles.options}> <Link to="./artificial_intelligence" className={headerStyles.pages}>Artificial inteligence</Link> </DropdownItem>
+                <DropdownItem className={headerStyles.options}><Link to="./cloud_native" className={headerStyles.pages}>Cloud Native and Mobile Web</Link> </DropdownItem>
+                <DropdownItem className={headerStyles.options}><Link to="./blockchain" className={headerStyles.pages}>Blockchain</Link> </DropdownItem>
+                <DropdownItem className={headerStyles.options}><Link to="./internet_of_things" className={headerStyles.pages}>Internet Of Things</Link> </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret className={headerStyles.links}>
+                About
+              </DropdownToggle>
+              <DropdownMenu right className={headerStyles.dropdown} id = "abouts">
+                <DropdownItem className={headerStyles.options}><Link to="./about" className={headerStyles.pages}>The President</Link></DropdownItem>
+                <DropdownItem className={headerStyles.options}><Link to="./managementComittee" className={headerStyles.pages}>Management Committie</Link></DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+
+            <NavItem>
+              <NavLink className={headerStyles.links}>
+                <Link to="./wit" className={headerStyles.pages}>WIT</Link>
+              </NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+        </div>
+        <NavbarToggler onClick={toggle} className={headerStyles.toogle} />
+
+      </Navbar>
     </div>
-    
-    
-</header>
+  )
+}
+
+export default Header
