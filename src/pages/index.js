@@ -6,7 +6,7 @@ import indexS from '../components/index.module.scss'
 
 const Piaic = ({ data }) => {
   
-  const {president,title,title2,intro,applications,heading2,courses,heading3,list,heading4,vidtextfields,imageTags,allImages,imageText1,imageText2,imageText3,heading5,heading6,refrences} = data.contentfulHome;
+  const {president,title,title2,intro,applications,heading2,courses,heading3,list,heading4,vidtextfields,imageTags,allImages,imageText1,imageText2,imageText3,heading5,heading6} = data.contentfulHome;
   
   return (
 <Layout >
@@ -58,7 +58,7 @@ const Piaic = ({ data }) => {
       <h1>{courses["description3"]}</h1>
       </div>
       <div className= {indexS.child4}>
-      <Link to="/iot"><button><p>{courses["name4"]}</p></button></Link>
+      <Link to="/internet_of_things"><button><p>{courses["name4"]}</p></button></Link>
       <h1>{courses["description4"]}</h1>
       </div>
       </div>
@@ -254,7 +254,7 @@ const Piaic = ({ data }) => {
   <Link to="/artificial_intelligence"><p>Artificial Intelligence</p></Link>
   <Link to="/cloud_native"><p>Cloud Native and Mobile Web Computing</p></Link>
   <Link to="/blockchain"><p>Blockchain</p></Link>
-  <Link to="/iot"><p>Internet of Things and AI</p></Link>
+  <Link to="/internet_of_things"><p>Internet of Things and AI</p></Link>
   <Link to="/about"><p>About The President</p></Link>
   <Link to="/managementComittee"><p>Management Comittee</p></Link>
   <Link to="/wit"><p>Women Inclusion in Technology (WIT)</p></Link>
