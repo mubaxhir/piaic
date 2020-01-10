@@ -4,7 +4,7 @@
 }
 
 .flex{
-    display: grid;
+    // display: grid;
     grid-template-columns: auto auto;
     width: 100%;
 }
@@ -381,6 +381,8 @@ font-weight: bold;
 color: #f4f8fc;
 box-sizing: border-box; 
 transition: .3s;
+list-style-type: none;
+list-style: none;
 }
 .vidobbject{
     font-size: 1vw;
@@ -422,6 +424,9 @@ height: 7vw;
     min-height: 1vw;
     max-height: 34.6vw;
     order: 13;
+    div ul {
+        list-style: none;
+    }
 }
 .vidlistimg1{
 font-size: 1vw;
@@ -735,7 +740,7 @@ margin-top: 4.5vw;
     height: 30vw;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("./2.jpg");
+    background-image: url("./3.jpg");
     margin-left: 1.5vw;
     margin-right: 2vw;
     margin-top: 4.5vw;
@@ -960,15 +965,13 @@ margin-top: 4.5vw;
         .parent4{
             width: 100%;
             height: auto;
-            padding-bottom: 30vw;
+            // padding-bottom: 30vw;
             .vidhead{
                 width: 100%;
                 font-size: 5vh;
                 margin: 0;
             }
-            .videobox{
-                width: 100%;
-            }
+            
             .vidlistbox{
                 width: 100%;
             }
@@ -1204,18 +1207,36 @@ margin-top: 4.5vw;
         width: 110%;
         margin-top: 15em;
         padding-left: -2em;
+        height: 50vw;
+        padding-bottom: 43vw;
+        div{
+            height: 45vw;
+        }
+        ul {
+            padding-left: 0;
+            height: 45vw;
+            li{
+            padding-bottom: 5px;
+                div{
+                    height:13vw;
+                }
+        }}
     }
     .spotlight2{
         width: 100%;
         .spotlight{
             
             img{width: 100%;}
+            display: grid; 
         }
         .text{
             width: 100%;
             float: right;
         }
     }   
+    .super{
+            padding-bottom: 32vw;
+    }
     .partner{
         width: 100%;
         height: 150px;

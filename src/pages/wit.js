@@ -2,17 +2,20 @@ import React from "react"
 import Layout from "../components/layout"
 import WIT from "../components/WIT.module.scss"
 
-
-
-export default () => <Layout>
+const Piaic = ({ data }) => {
   
-  <div className={WIT.main}><img src={require("../components/witIcon.jpg")} alt="mainIcon" /></div>
+  const {title,image,text,images} = data.contentfulWit;
+  
+  return (
+<Layout >
+  
+  <div className={WIT.main}><img src={image["file"]["url"]} alt="mainIcon" /></div>
   
   <div className={WIT.super}>
-
-  <p>The Women Empowerment Division of the Presidential Initiative for Artificial Intelligence & Computing is committed to the empowerment and autonomy of women in Pakistan.</p>
+  <p>{text.text}</p>
+  {/* <p>The Women Empowerment Division of the Presidential Initiative for Artificial Intelligence & Computing is committed to the empowerment and autonomy of women in Pakistan.</p>
   <p>The single most important channel for the empowerment of women is education. The Women Empowerment Division is committed to providing the best technical education in the world with the flexibility to allow just about anyone to participate and improve their lives. The primary objective of the Women Empowerment Division is to provide a platform via which women can receive education and training to jumpstart their careers in the global technology industry.</p>
-  <p>The Women Inclusion in Technology project is the largest initiative on women education in Pakistan. The main of the project is to drive female participation in the technology industry in Pakistan from less than 5% to 30% over the next two years. Via this project, PIAIC is propagating awareness and training on the latest, most state-of-the-art technologies to women in Pakistan. The Women Empowerment Division will aid highly skilled women in technology to establish themselves as entrepreneurs and leaders in the technology industry not only in Pakistan but also around the world.</p>
+  <p>The Women Inclusion in Technology project is the largest initiative on women education in Pakistan. The main of the project is to drive female participation in the technology industry in Pakistan from less than 5% to 30% over the next two years. Via this project, PIAIC is propagating awareness and training on the latest, most state-of-the-art technologies to women in Pakistan. The Women Empowerment Division will aid highly skilled women in technology to establish themselves as entrepreneurs and leaders in the technology industry not only in Pakistan but also around the world.</p> */}
 
   <h1>WOMEN INCLUSION IN TECHNOLOGY</h1>
   <div className={WIT.line}></div>
@@ -132,10 +135,36 @@ export default () => <Layout>
   <div className={WIT.spotlight4}>
   <div className={WIT.image56}><img src={require("../components/wit/56.jpg")} alt="mainIcon" /></div>
   <div className={WIT.image57}><img src={require("../components/wit/57.jpg")} alt="mainIcon" /></div>
-  <div className={WIT.image58}><img src={require("../components/wit/58.jpg")} alt="mainIcon" /></div>
+  <div className={WIT.image58}><img src={("../components/wit/58.jpg")} alt="mainIcon" /></div>
   <div className={WIT.image59}><img src={require("../components/wit/59.jpg")} alt="mainIcon" /></div>
   </div>
   
   </div>
   
 </Layout>
+
+);
+};
+
+export default Piaic;
+export const pageQuery = graphql`
+query witQuery {
+  contentfulWit {
+    title
+    image {
+      file {
+        url
+      }
+    }
+    text {
+      text
+    }
+    images {
+      title
+      file {
+        url
+      }
+    }
+  }
+}
+`;

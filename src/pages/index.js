@@ -15,11 +15,12 @@ const Piaic = ({ data }) => {
       
    
     <div className = {indexS.flex}>
-    <div className = {indexS.title}><img src={president["file"]["url"]}/></div>
+    <div className = {indexS.title}><img src={president["file"]["url"]}/>
     <div className={indexS.titleout}>
     <h1>{title}</h1>
     <h2>{title2}</h2>
     <p>{intro["intro"]}</p></div>
+    </div>
     </div>
     </div>
     
@@ -197,8 +198,7 @@ const Piaic = ({ data }) => {
   <h1>{heading5}</h1>
   <div className={indexS.spotlight2}>
   <div className={indexS.spotlight}>
-  <div className={indexS.image}>
-  </div>
+  <div className={indexS.image}></div>
   <div className={indexS.text}>
   <h2>{imageTags[0]}</h2>
 <p>{imageText1['imageText1']}</p>
@@ -206,8 +206,7 @@ const Piaic = ({ data }) => {
   </div>
 
   <div className={indexS.spotlight}>
-  <div className={indexS.image2}>
-  </div>
+  <div className={indexS.image2}></div>
   <div className={indexS.text}>
 <h2>{imageTags[1]}</h2>
 <p>{imageText2.imageText2}</p>
@@ -215,8 +214,7 @@ const Piaic = ({ data }) => {
   </div>
   
   <div className={indexS.spotlight}>
-  <div className={indexS.image3}>
-  </div>
+  <div className={indexS.image3}></div>
   <div className={indexS.text}>
   <h2>{imageTags[2]}</h2>
   <p>{imageText3.imageText3}</p>
